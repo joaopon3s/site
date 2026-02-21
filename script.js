@@ -45,7 +45,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     const installPopup = document.createElement('div');
     installPopup.id = 'pwa-install-popup';
     installPopup.innerHTML = `
-        <div style="position:fixed;top:80px;text-center;z-index:9999;background:#fff;border-radius:12px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,0.2);text-align:center;">
+        <div style="position:fixed;top:80px;text-center;z-index:9999;background:#fff;border-radius:12px;padding:0px;box-shadow:0 4px 16px rgba(0,0,0,0.2);text-align:center;">
             <strong>Instale nosso aplicativo!</strong><br>
             E tenha acesso rápido as nossas novidades.<br>
             <button id="pwa-install-btn" class="btn btn-success mt-2">Instalar</button>
