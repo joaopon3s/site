@@ -42,59 +42,68 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
 // Mostra o popup customizado
-// 1. Injeta o CSS de forma segura no <head> da página
-const style = document.createElement('style');
-style.innerHTML = `
-  #pwa-install-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); /* Para funcionar no Safari/iPhone */
-    z-index: 99999; /* Z-index bem alto para ficar na frente de tudo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #pwa-install-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    text-align: center;
-    max-width: 90%;
-    width: 350px;
-  }
-`;
-document.head.appendChild(style);
+let deferredPrompt;
 
-// 2. Cria a estrutura do Popup
-const installPopup = document.createElement('div');
-installPopup.id = 'pwa-install-overlay';
-installPopup.innerHTML = `
-  <div id="pwa-install-box">
-      <strong style="font-size: 1.2rem; color: #333;">Instale nosso aplicativo!</strong><br>
-      <p style="color: #666; margin-top: 10px; margin-bottom: 20px;">E tenha acesso rápido às nossas novidades.</p>
-      
-      <div style="display: flex; gap: 10px; justify-content: center;">
-          <button id="pwa-install-btn" class="btn btn-success" style="flex: 1;">Instalar</button>
-          <button id="pwa-close-btn" class="btn btn-outline-secondary" style="flex: 1;">Fechar</button>
-      </div>
-  </div>
-`;
-document.body.appendChild(installPopup);
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
 
-// 3. Lógica dos botões
-document.getElementById('pwa-install-btn').onclick = () => {
-    installPopup.remove();
-    if (typeof deferredPrompt !== 'undefined') {
+    // 1. Cria o Overlay (Fundo que escurece e desfoca)
+    const overlay = document.createElement('div');
+    overlay.id = 'pwa-overlay';
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+    `;
+
+    // 2. Cria a Caixinha (Popup centralizado)
+    const popupBox = document.createElement('div');
+    popupBox.className = 'container'; // Usa o container do Bootstrap para responsividade
+    popupBox.style.cssText = `
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 380px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        margin: 20px;
+    `;
+
+    popupBox.innerHTML = `
+        <strong style="font-size: 1.3rem; color: #333; display: block; margin-bottom: 10px;">Instale nosso aplicativo!</strong>
+        <p style="color: #666; margin-bottom: 25px;">Tenha acesso rápido ao portfólio de JV Sato diretamente da sua tela inicial.</p>
+        <div class="d-grid gap-2">
+            <button id="pwa-install-btn" class="btn btn-primary" style="border-radius: 50px; padding: 12px;">Instalar Agora</button>
+            <button id="pwa-close-btn" class="btn btn-link text-muted">Depois</button>
+        </div>
+    `;
+
+    overlay.appendChild(popupBox);
+    document.body.appendChild(overlay);
+
+    // 3. Lógica de cliques
+    document.getElementById('pwa-install-btn').onclick = () => {
+        overlay.remove();
         deferredPrompt.prompt();
-    }
-};
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('Usuário aceitou a instalação');
+            }
+            deferredPrompt = null;
+        });
+    };
 
-document.getElementById('pwa-close-btn').onclick = () => {
-    installPopup.remove();
-};
+    document.getElementById('pwa-close-btn').onclick = () => {
+        overlay.remove();
+    };
+});
