@@ -1,20 +1,20 @@
 {
   "name": "Criação de Sites | JV Sato",
   "short_name": "JV Sato",
-  "start_url": ".",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#000000",
+  "theme_color": "#535da1",
   "icons": [
     {
       "src": "images/joao.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg" 
     },
     {
       "src": "images/joao.jpg",
       "sizes": "256x256",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ]
 }
