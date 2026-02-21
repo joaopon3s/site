@@ -42,30 +42,42 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
 // Mostra o popup customizado
-   // Cria o overlay (fundo escuro e desfocado)
-const installPopup = document.createElement('div');
-installPopup.id = 'pwa-install-popup';
-
-// Estilos do fundo (Overlay) aplicados direto na div principal
-installPopup.style.cssText = `
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Fundo levemente escuro */
-  backdrop-filter: blur(5px); /* Efeito de desfoque mágico */
-  z-index: 9999;
-  display: flex;
-  justify-content: center; /* Centraliza na horizontal */
-  align-items: center; /* Centraliza na vertical */
+// 1. Injeta o CSS de forma segura no <head> da página
+const style = document.createElement('style');
+style.innerHTML = `
+  #pwa-install-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Para funcionar no Safari/iPhone */
+    z-index: 99999; /* Z-index bem alto para ficar na frente de tudo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #pwa-install-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 350px;
+  }
 `;
+document.head.appendChild(style);
 
-// O conteúdo da caixinha (sem os estilos de position fixed, pois o Flexbox já centraliza)
+// 2. Cria a estrutura do Popup
+const installPopup = document.createElement('div');
+installPopup.id = 'pwa-install-overlay';
 installPopup.innerHTML = `
-  <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); text-align: center; max-width: 90%; width: 350px;">
+  <div id="pwa-install-box">
       <strong style="font-size: 1.2rem; color: #333;">Instale nosso aplicativo!</strong><br>
-      <p style="color: #666; margin-top: 10px; margin-bottom: 20px;">E tenha acesso rápido as nossas novidades.</p>
+      <p style="color: #666; margin-top: 10px; margin-bottom: 20px;">E tenha acesso rápido às nossas novidades.</p>
       
       <div style="display: flex; gap: 10px; justify-content: center;">
           <button id="pwa-install-btn" class="btn btn-success" style="flex: 1;">Instalar</button>
@@ -73,13 +85,14 @@ installPopup.innerHTML = `
       </div>
   </div>
 `;
-
 document.body.appendChild(installPopup);
 
-// Os eventos de clique continuam iguais aos que você já tem:
+// 3. Lógica dos botões
 document.getElementById('pwa-install-btn').onclick = () => {
     installPopup.remove();
-    deferredPrompt.prompt();
+    if (typeof deferredPrompt !== 'undefined') {
+        deferredPrompt.prompt();
+    }
 };
 
 document.getElementById('pwa-close-btn').onclick = () => {
