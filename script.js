@@ -25,7 +25,7 @@ document.getElementById('shareBtn').addEventListener('click', function() {
     if (navigator.share) {
         navigator.share({
             title: document.title,
-            text: 'Confira esta página!',
+            text: 'Compre seu site agora!',
             url: window.location.href
         });
     } else {
