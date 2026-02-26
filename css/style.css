@@ -1,12 +1,3 @@
-/*
-
-TemplateMo 578 First Portfolio
-
-https://templatemo.com/tm-578-first-portfolio
-
-*/
-
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
@@ -97,10 +88,14 @@ h6 {
   font-size: var(--h6-font-size);
 }
 
-p {
+p, {
   color: var(--p-color);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-normal);
+}
+
+small {
+  color: var(--p-color);
 }
 
 ul li {
