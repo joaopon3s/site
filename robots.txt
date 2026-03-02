@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Disallow: /fonts/
+
+Sitemap: https://jvsato.com.br/sitemap.txt
