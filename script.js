@@ -88,7 +88,7 @@ function showPwaPopup() {
     overlay.innerHTML = `
         <div style="background: #fff; padding: 30px; border-radius: 20px; text-align: center; max-width: 350px; margin: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
             <h4 style="color: #333; margin-bottom: 10px;">Instalar Aplicativo?</h4>
-            <p style="color: #666; margin-bottom: 20px;">Acesse ao meu site como um aplicativo diretamente do seu tela inicial!</p>
+            <p style="color: #666; margin-bottom: 20px;">Acesse ao meu site como um aplicativo diretamente da sua tela inicial!</p>
             <div class="d-grid gap-2">
                 <button id="pwa-install-btn" class="btn btn-primary" style="border-radius: 50px;">Instalar Agora</button>
                 <button id="pwa-close-btn" class="btn btn-link text-muted" style="text-decoration: none;">Depois</button>
