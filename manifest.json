@@ -1,20 +1,24 @@
 {
-  "name": "Criação de Sites | JV Sato",
+  "name": "JV Sato | Desenvolvimento Web Profissional",
   "short_name": "JV Sato",
-  "start_url": "index.html",
+  "description": "Criação de sites profissionais de alta performance, hospedagem gratuita e SEO para todo o Brasil.",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#535da1",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "images/joao.jpg",
+      "src": "images/favicon.png",
       "sizes": "192x192",
-      "type": "image/jpeg" 
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "images/joao.jpg",
-      "sizes": "256x256",
-      "type": "image/jpeg"
+      "src": "images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
