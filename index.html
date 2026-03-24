@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="pt-BR">
     <head>
-        <!-- Google tag (gtag.js) -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PX6JYS9PJ"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,16 +13,22 @@
         gtag('config', 'G-9PX6JYS9PJ');
         </script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
         <link rel="stylesheet" href="css/style.css" fetchpriority="high">
         
         <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-            <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="css/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <noscript>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/bootstrap-icons.css">
+            <link rel="stylesheet" href="css/magnific-popup.css">
+        </noscript>
+
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@800&display=swap" rel="stylesheet">
 
         <script type="application/ld+json">
             {
@@ -46,7 +54,6 @@
             }
             </script>
 
-        
         <link rel="manifest" href="manifest.json">
         <script src="script.js" defer></script>
 
@@ -67,27 +74,8 @@
             <meta property="twitter:description" content="Criação de sites profissionais de alta performance com custo zero de hospedagem.">
             <meta property="twitter:image" content="https://www.jvsato.com.br/images/joao.jpg">
 
-
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="css/magnific-popup.css" rel="stylesheet">
-
-        <link href="css/style.css" rel="stylesheet">
-
         <link rel="icon" type="image/jpg" href="images/favicon.png">
         <link rel="apple-touch-icon" href="images/favicon.png">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
-
     </head>
     
     <body>
@@ -126,8 +114,6 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_3">Serviços</a>
                         </li>
-
-                        <!--PROJETOS-->
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4">Contato</a>
@@ -194,7 +180,7 @@
                             </div>
                         </div>
                     <div class="col-lg-6 col-12">
-                        <img src="images/undraw_stepping-up_i0i7.svg" class="about-image img-fluid" width="70%" height="70%" style="margin: 15%;" alt="ilustração de uma pessoa e um grafico evoluindo positivamente" style="margin: 20px;">
+                        <img src="images/undraw_stepping-up_i0i7.svg" class="about-image img-fluid" width="70%" height="70%" style="margin: 15%;" alt="ilustração de uma pessoa e um grafico evoluindo positivamente">
                     </div>
                     
                     <div class="row">
@@ -262,8 +248,6 @@
                     </div>
                 </div>
             </section>
-
-           <!-- clientes -->
 
             <section class="services section-padding" id="section_3">
                 <div class="container">
@@ -341,8 +325,6 @@
                     </div>
                 </div>
             </section>
-
-<!--PROJETOS-->
 
             <section class="faq section-padding" id="section_faq">
                     <div class="container">
@@ -492,7 +474,7 @@
                             </div>
                            
                                 <div class="d-flex justify-content-end align-items-end">
-                                    <img src="images/undraw_bull-market_4a8e.svg" class="img-fluid" width="300px" height="300px" style="margin: 20px" alt="ilustração de uma pessoa ao lado de um grafico representando resultados positivos">
+                                    <img src="images/undraw_bull-market_4a8e.svg" class="img-fluid" width="300" height="300" style="margin: 20px" alt="ilustração de uma pessoa ao lado de um grafico representando resultados positivos">
                                 </div>
                             </div>
                     </div>
@@ -513,11 +495,11 @@
                                 <a class="bi-github" href="https://github.com/joaopon3s/" aria-label="Veja o GitHub de JV Sato" style="font-size: 24px; margin: 5px"></a>
                             </p>
                             <p>
-                                <button id="shareBtn" class="bi-share" style="text-decoration: compartilhe!; border: none; background: none; padding: 0; margin-left: 8px; color: gray;" onclick="sharePage()"> Compartilhe!</button>
+                                <button id="shareBtn" class="bi-share" style="border: none; background: none; padding: 0; margin-left: 8px; color: gray;" onclick="sharePage()"> Compartilhe!</button>
                             </p>
                             <p class="mb-0">
                                 <span class="copyright-text">© 2026</span>
-                                <a rel="sponsored" href="index.html" target="index.html">JV Sato</a>
+                                <a href="index.html">JV Sato</a>
                             </p>
                         </div>
                     </div>
@@ -525,9 +507,6 @@
             </div>
         </footer>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
@@ -537,18 +516,9 @@
         <script src="js/custom.js"></script>
         <script src="js/service-worker.js"></script>
 
-        <!--Botão do WhatsApp-->
         <a href="https://wa.me/5511989580867" target="_blank" id="whatsapp-float" title="Fale comigo no WhatsApp">
         <img src="https://images.icon-icons.com/2429/PNG/96/whatsapp_logo_icon_147205.png" width="50" height="50" alt="WhatsApp">
         </a>
         
     </body>
-
 </html>
-
-
-
-
-
-
-
