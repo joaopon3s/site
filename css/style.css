@@ -521,6 +521,8 @@ strong {
   top: 0;
   width: 100%;
   min-width: 550px;
+  aspect-ratio: 500 / 400; 
+  object-fit: contain;
 }
 
 .hero svg {
@@ -1237,4 +1239,3 @@ strong {
     -webkit-background-clip: text;
     font-size: 1.8rem;
 }
-
