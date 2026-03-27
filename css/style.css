@@ -1237,3 +1237,7 @@ strong {
     -webkit-background-clip: text;
     font-size: 1.8rem;
 }
+.efeito-pulsar {
+    animation: pulse 1.0s infinite; 
+    display: inline-block;
+}
