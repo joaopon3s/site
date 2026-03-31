@@ -6,7 +6,6 @@ const ASSETS_TO_CACHE = [
   '/script.js',
   '/manifest.json',
   '/images/joao.png',
-  '/images/joao.png',
   '/images/joao.jpg',
   // Adiciona aqui os teus ficheiros de JS da pasta /js se necessário
   '/js/custom.js',
