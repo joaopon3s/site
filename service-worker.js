@@ -2,11 +2,11 @@ const CACHE_NAME = 'jvsato-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/style.css',
+  '/css/style.css',
   '/script.js',
   '/manifest.json',
-  '/images/icon-192.png',
-  '/images/icon-512.png',
+  '/images/joao.png',
+  '/images/joao.png',
   '/images/joao.jpg',
   // Adiciona aqui os teus ficheiros de JS da pasta /js se necessário
   '/js/custom.js',
