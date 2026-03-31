@@ -637,7 +637,7 @@ strong {
   position: relative;
   overflow: hidden;
   margin-bottom: 24px;
-  padding: 40px 40px 240px 40px;
+  padding: 40px 40px 40px 40px;
   transition: all 0.5s;
 }
 
@@ -890,7 +890,7 @@ strong {
 
 .site-footer-title {
   font-size: var(--menu-font-size);
-  color: var(--dark-color);
+  color: var(--dark -color);
   text-transform: uppercase;
 }
 
@@ -972,7 +972,7 @@ strong {
 .social-icon-link:hover {
   background: var(--secondary-color);
   border-color: transparent;
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 
@@ -1101,7 +1101,7 @@ strong {
 
   .services-thumb {
     margin-bottom: 32px;
-    padding-bottom: 270px;
+    padding-bottom: 32px;
   }
 
   .services-icon-wrap {
