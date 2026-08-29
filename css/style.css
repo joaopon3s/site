@@ -2,39 +2,39 @@
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #535da1;
-  --secondary-color:              #14B789;
-  --section-bg-color:             #f9f9f9;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #e9eaeb;
-  --featured-border-color:        #727aab;
+  --white-color: #ffffff;
+  --primary-color: #535da1;
+  --secondary-color: #14B789;
+  --section-bg-color: #f9f9f9;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #e9eaeb;
+  --featured-border-color: #727aab;
 
-  --body-font-family:             'DM Sans', sans-serif;
+  --body-font-family: 'DM Sans', sans-serif;
 
-  --h1-font-size:                 62px;
-  --h2-font-size:                 48px;
-  --h3-font-size:                 36px;
-  --h4-font-size:                 32px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  18px;
-  --menu-font-size:               12px;
-  --copyright-font-size:          14px;
+  --h1-font-size: 62px;
+  --h2-font-size: 48px;
+  --h3-font-size: 36px;
+  --h4-font-size: 32px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --menu-font-size: 12px;
+  --copyright-font-size: 14px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-normal:           400;
-  --font-weight-medium:           500;
-  --font-weight-bold:             700;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 body {
-    background: var(--white-color);
-    font-family: var(--body-font-family); 
+  background: var(--white-color);
+  font-family: var(--body-font-family);
 }
 
 
@@ -104,7 +104,7 @@ ul li {
   font-weight: var(--font-weight-normal);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -154,13 +154,13 @@ strong {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 .avatar-image-large {
   width: 90.4px;
   height: 90.4px;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 
@@ -205,12 +205,15 @@ strong {
 }
 
 @-webkit-@keyframes spinner {
-  to {transform: rotate(360deg);
+  to {
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spinner {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -225,18 +228,18 @@ strong {
   height: 47px;
   line-height: 47px;
   text-align: center;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 .is-sticky .navbar-icon {
   background: var(--secondary-color);
   color: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 .form-check-icon {
   color: var(--secondary-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 
@@ -247,7 +250,7 @@ strong {
 .navbar .custom-btn {
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-bold);
-  
+
 }
 
 .navbar .custom-btn {
@@ -257,7 +260,7 @@ strong {
   border-color: var(--white-color);
   color: var(--white-color);
   padding: 8px 22px;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)
 }
 
 .navbar .custom-btn:hover {
@@ -276,7 +279,7 @@ strong {
 
 .custom-btn:hover {
   background: var(--primary-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   color: var(--white-color);
 }
 
@@ -293,12 +296,12 @@ strong {
 }
 
 .custom-link {
-	background-color: var(--primary-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  background-color: var(--primary-color);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
 
 .custom-link:hover {
-	background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 
@@ -391,12 +394,12 @@ strong {
   height: 2px;
 }
 
-.navbar-nav .nav-link.active::after, 
+.navbar-nav .nav-link.active::after,
 .navbar-nav .nav-link:hover::after {
   background: var(--secondary-color);
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color);
 }
@@ -479,7 +482,7 @@ strong {
   padding-bottom: 330px;
 }
 
-@media  screen and (min-width: 991px) {
+@media screen and (min-width: 991px) {
   .hero {
     height: 60vh;
   }
@@ -488,7 +491,7 @@ strong {
 .hero-title,
 .hero h2 {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   border-radius: var(--border-radius-medium);
   display: inline-block;
   padding: 8px 24px;
@@ -605,7 +608,7 @@ strong {
 -----------------------------------------*/
 
 .clients-item-height {
-	height: 120px;
+  height: 120px;
 }
 
 .clients-image {
@@ -649,7 +652,7 @@ strong {
 
 .services-thumb:hover {
   border: 2px solid var(--secondary-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
 
 .services-thumb:hover .services-icon-wrap {
@@ -826,7 +829,7 @@ strong {
 .form-check-label-text {
   color: var(--p-color);
   display: block;
-  font-size: copyright-font-size;
+  font-size: var(--copyright-font-size);
   margin-top: 5px;
 }
 
@@ -890,7 +893,7 @@ strong {
 
 .site-footer-title {
   font-size: var(--menu-font-size);
-  color: var(--dark -color);
+  color: var(--dark-color);
   text-transform: uppercase;
 }
 
@@ -994,11 +997,11 @@ strong {
   .hero-image {
     min-width: 650px;
   }
-  
+
   .hero-title,
-	.hero h2 {
-	  font-size: var(--h2-font-size);
-	}
+  .hero h2 {
+    font-size: var(--h2-font-size);
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1183,46 +1186,57 @@ strong {
 }
 
 #whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 9999;
-    animation: pulse 1.2s infinite;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999;
+  animation: pulse 1.2s infinite;
 }
+
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 #whatsapp-float img {
-    border-radius: 50%;
-    box-shadow: 0 0 24px 4px rgba(255,255,255,0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 24px 4px rgba(255, 255, 255, 0.25);
 }
+
 /*---------------------------------------
   FAQ             
 -----------------------------------------*/
 .accordion-item {
-    border: 2px solid var(--secondary-color);
-    border: none;
-    background: transparent;
+  border: 2px solid var(--secondary-color);
+  border: none;
+  background: transparent;
 }
 
 .accordion-button {
-    border-radius: 10px !important;
-    font-weight: 500;
-    border: var(--secondary-color) 1px solid;  
+  border-radius: 10px !important;
+  font-weight: 500;
+  border: var(--secondary-color) 1px solid;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--secondary-color);
-    color: white;
-    box-shadow: none;
+  background-color: var(--secondary-color);
+  color: white;
+  box-shadow: none;
 }
 
 .accordion-body {
-    background-color: #f8f9fa;
-    border-radius: 0 0 10px 10px;
-    color: #333;
+  background-color: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+  color: #333;
 }
 
 /*---------------------------------------
@@ -1230,14 +1244,17 @@ strong {
 -----------------------------------------*/
 
 .logo-text {
-    font-family: 'Syne', sans-serif; /* A fonte marcante */
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -1px; /* Deixa as letras mais juntas, estilo logo moderna */
-    -webkit-background-clip: text;
-    font-size: 1.8rem;
+  font-family: 'Syne', sans-serif;
+  /* A fonte marcante */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  /* Deixa as letras mais juntas, estilo logo moderna */
+  -webkit-background-clip: text;
+  font-size: 1.8rem;
 }
+
 .efeito-pulsar {
-    animation: pulse 1.0s infinite; 
-    display: inline-block;
+  animation: pulse 1.0s infinite;
+  display: inline-block;
 }
