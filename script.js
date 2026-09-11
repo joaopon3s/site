@@ -284,7 +284,7 @@ function updatePricing() {
   } else {
     // Texto quando a opção Parcelado está selecionada
     if (periodPro) periodPro.innerHTML = '&nbsp;em 10x s/ juros';
-    if (notePro) notePro.textContent = '';
+    if (notePro) notePro.textContent = 'total R$990';
   }
 
   // Alterna o visual das labels e do botão switch
