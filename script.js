@@ -21,6 +21,31 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
+/* ── SCROLL INDICATOR ── */
+const scrollIndicator = document.getElementById('scrollIndicator');
+
+function toggleScrollIndicator() {
+  if (!scrollIndicator) return;
+
+  const hasScrollableContent = document.documentElement.scrollHeight > window.innerHeight + 80;
+  const nearTop = window.scrollY < 120;
+
+  scrollIndicator.classList.toggle('visible', hasScrollableContent && nearTop);
+}
+
+if (scrollIndicator) {
+  scrollIndicator.addEventListener('click', () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  });
+}
+
+window.addEventListener('scroll', toggleScrollIndicator, { passive: true });
+window.addEventListener('resize', toggleScrollIndicator);
+toggleScrollIndicator();
+
 /* ── MOBILE MENU ── */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -373,20 +398,18 @@ if (ctaForm) {
   });
 }
 
-/* ── PREENCHIMENTO AUTOMÁTICO DO SERVIÇO VIA BOTÕES DE PREÇO ── */
-document.querySelectorAll('.btn-price[data-servico]').forEach(button => {
+/* ── PREENCHIMENTO AUTOMÁTICO DO SERVIÇO VIA BOTÕES DE CTA ── */
+document.querySelectorAll('[data-servico]').forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
 
     const valorServico = button.getAttribute('data-servico');
-    // ID corrigido para bater com o formulário CTA (#cta-service)
     const selectServico = document.getElementById('cta-service');
 
     if (selectServico) {
       selectServico.value = valorServico;
     }
 
-    // ID de rolagem corrigido para bater com a seção (#cta)
     const secaoContato = document.getElementById('cta');
     if (secaoContato) {
       secaoContato.scrollIntoView({ behavior: 'smooth' });
