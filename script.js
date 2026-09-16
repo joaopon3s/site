@@ -52,11 +52,24 @@ toggleScrollIndicator();
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
+if (mobileMenu) {
+  mobileMenu.hidden = true;
+  mobileMenu.inert = true;
+  mobileMenu.removeAttribute('role');
+  mobileMenu.removeAttribute('aria-modal');
+  mobileMenu.removeAttribute('aria-label');
+  mobileMenu.removeAttribute('aria-hidden');
+}
+
 function openMobileMenu() {
   hamburger.classList.add('open');
   mobileMenu.classList.add('open');
   mobileMenu.hidden = false;
-  mobileMenu.setAttribute('aria-hidden', 'false');
+  mobileMenu.inert = false;
+  mobileMenu.setAttribute('role', 'dialog');
+  mobileMenu.setAttribute('aria-modal', 'true');
+  mobileMenu.setAttribute('aria-label', 'Navegação');
+  mobileMenu.removeAttribute('aria-hidden');
   hamburger.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
 }
@@ -64,7 +77,11 @@ function closeMobileMenu() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenu.hidden = true;
-  mobileMenu.setAttribute('aria-hidden', 'true');
+  mobileMenu.inert = true;
+  mobileMenu.removeAttribute('role');
+  mobileMenu.removeAttribute('aria-modal');
+  mobileMenu.removeAttribute('aria-label');
+  mobileMenu.removeAttribute('aria-hidden');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
