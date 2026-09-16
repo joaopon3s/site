@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--text-1);
   overflow-x: hidden;
@@ -57,6 +57,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -64,6 +65,21 @@ button {
   border: none;
   background: none;
   font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ── SUBTLE NOISE TEXTURE ── */
@@ -110,7 +126,7 @@ body::before {
 }
 
 .section-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -120,7 +136,7 @@ body::before {
 
 .section-title em {
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, "Times New Roman", serif;
   color: var(--accent);
 }
 

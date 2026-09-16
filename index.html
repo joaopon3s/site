@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#535da1" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
   
   <!-- SEO & Meta Tags Nacionais Otimizadas -->
   <title>Criação de Sites Profissionais para Empresas | JV Sato</title>
@@ -12,19 +15,18 @@
   <meta name="author" content="João Victor Sato">
   <link rel="canonical" href="https://www.jvsato.com.br/" />
   <link rel="icon" type="image/png" href="https://www.jvsato.com.br/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="images/logo.png" as="image" type="image/png" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PX6JYS9PJ"></script>
+  <!-- Google Analytics (carregado de forma não bloqueante) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-9PX6JYS9PJ');
   </script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-9PX6JYS9PJ"></script>
 
   <!-- Schema.org ProfessionalService -->
   <script type="application/ld+json">
@@ -161,18 +163,23 @@
   <meta property="og:url" content="https://www.jvsato.com.br/">
   <meta property="og:title" content="JV SATO | Criação de Sites Profissionais, Dominio, SEO e Hospedagem Web">
   <meta property="og:description" content="Transforme sua empresa em uma máquina de vendas com um site profissional de alta performance. Sem mensalidades de hospedagem e otimizado para o Google.">
-  <meta property="og:image" content="https://www.jvsato.com.br/images/favicon.png">
-  <meta property="og:image:width" content="118">
-  <meta property="og:image:height" content="118">
+  <meta property="og:image" content="https://www.jvsato.com.br/images/logo.png">
+  <meta property="og:image:width" content="144">
+  <meta property="og:image:height" content="72">
   <meta property="og:image:type" content="image/png">
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="og:image:alt" content="Logo JV Sato">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JV SATO | Criação de Sites Profissionais, Dominio, SEO e Hospedagem Web">
+  <meta name="twitter:description" content="Transforme sua empresa em uma máquina de vendas com um site profissional de alta performance. Sem mensalidades de hospedagem e otimizado para o Google.">
+  <meta name="twitter:image" content="https://www.jvsato.com.br/images/logo.png">
+  <meta name="twitter:image:alt" content="Logo JV Sato">
 
 </head>
 
 <body>
 
   <!-- ── MOBILE MENU ── -->
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" hidden>
     <a href="#screens">Projetos</a>
     <a href="#testimonials">Avaliações</a>
     <a href="#pricing">Ofertas</a>
@@ -186,7 +193,7 @@
   <nav class="nav" id="mainNav" role="navigation" aria-label="Navegação principal">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="images/logo.png" alt="Logo de jv sato" class="nav-logo-img">
+        <img src="images/logo.png" alt="Logo de jv sato" class="nav-logo-img" width="144" height="72">
       </a>
       <ul class="nav-links" role="list">
         <li><a href="#screens">Projetos</a></li>
@@ -219,10 +226,10 @@
             <span>Soluções em tecnologia Web para todo o Brasil</span>
           </div>
           <h1 class="hero-title reveal reveal-delay-1">
-            Criação de Sites Profissionais para Empresas que Querem Mais Vendas
+            Criação de Sites para Empresas e Profissionais que Querem Mais Clientes
           </h1>
           <p class="hero-sub reveal reveal-delay-2">
-            Chega de perder clientes por não ter um site profissional. Criamos sites modernos, rápidos, otimizados para SEO e prontos para transformar visitantes em leads e vendas.
+            Chega de perder clientes por não ter um site profissional. Criamos sites modernos, rápidos, otimizados para Google e IA e prontos para converter visitantes em clientes.
           </p>
           <div class="hero-actions reveal reveal-delay-3">
             <a href="#pricing" class="btn-primary-lg">
@@ -387,7 +394,7 @@
         <div class="phone-card" data-pos="left2" data-index="0">
           <div class="phone-shell">
             <div class="phone-screen">
-              <img src="images/tm-622-screen-01.jpg" alt="Exemplo de site profissional responsivo 1" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+              <img src="images/optimized/tm-622-screen-01.webp" alt="Exemplo de site profissional responsivo 1" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
         </div>
@@ -395,7 +402,7 @@
         <div class="phone-card" data-pos="left1" data-index="1">
           <div class="phone-shell">
             <div class="phone-screen">
-              <img src="images/tm-622-screen-02.png" alt="Exemplo de landing page de alta conversão 2" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+              <img src="images/optimized/tm-622-screen-02.webp" alt="Exemplo de landing page de alta conversão 2" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
         </div>
@@ -403,7 +410,7 @@
         <div class="phone-card" data-pos="center" data-index="2">
           <div class="phone-shell">
             <div class="phone-screen">
-              <img src="images/tm-622-screen-03.jpg" alt="Exemplo de site otimizado para SEO 3" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+              <img src="images/optimized/tm-622-screen-03.webp" alt="Exemplo de site otimizado para SEO 3" style="width:100%;height:100%;object-fit:cover;display:block;" loading="eager" fetchpriority="high" />
             </div>
           </div>
         </div>
@@ -411,7 +418,7 @@
         <div class="phone-card" data-pos="right1" data-index="3">
           <div class="phone-shell">
             <div class="phone-screen">
-              <img src="images/tm-622-screen-04.jpg" alt="Exemplo de site rápido para empresas 4" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+              <img src="images/optimized/tm-622-screen-04.webp" alt="Exemplo de site rápido para empresas 4" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
         </div>
@@ -419,7 +426,7 @@
         <div class="phone-card" data-pos="right2" data-index="4">
           <div class="phone-shell">
             <div class="phone-screen">
-              <img src="images/tm-622-screen-05.jpg" alt="Exemplo de desenvolvimento web sob medida 5" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+              <img src="images/optimized/tm-622-screen-05.webp" alt="Exemplo de desenvolvimento web sob medida 5" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
         </div>
@@ -456,7 +463,7 @@
           <p class="testimonial-quote">"Substituímos o nosso site antigo pela nova estrutura desenvolvida pelo João. Agora nossos clientes nos encontram facilmente no Google e entram em contato direto pelo WhatsApp. A melhoria nas vendas foi imediata!"</p>
           <div class="testimonial-author">
             <div class="author-avatar">
-              <img src="images/elianeyumi.png" style="border-radius: 50%;" alt="foto de Eliane Yumi, cliente jv sato">
+              <img src="images/elianeyumi.png" style="border-radius: 50%;" alt="foto de Eliane Yumi, cliente jv sato" width="64" height="64">
             </div>
             <div>
               <div class="author-name">Eliane Yumi</div>
@@ -469,7 +476,7 @@
           <p class="testimonial-quote">"A velocidade do site no celular impressionou bastante. Consigo enviar o link para os clientes durante reuniões e tudo carrega instantaneamente."</p>
           <div class="testimonial-author">
             <div class="author-avatar">
-              <img src="images/ronaldjunior.png" style="border-radius: 50%;" alt="foto de Ronald Júnior, cliente jv sato">
+              <img src="images/ronaldjunior.png" style="border-radius: 50%;" alt="foto de Ronald Júnior, cliente jv sato" width="64" height="64">
             </div>
             <div>
               <div class="author-name">Ronald Júnior</div>
@@ -493,7 +500,7 @@
           <p class="testimonial-quote">"O fato de não ter taxas ou mensalidades recorrentes de hospedagem foi o grande diferencial para nós. Economia garantida todos os meses no caixa da empresa."</p>
           <div class="testimonial-author">
             <div class="author-avatar">
-              <img src="images/daniloribeiro.png" style="border-radius: 50%;" alt="foto de Danilo Ribeiro, cliente jv sato">
+              <img src="images/daniloribeiro.png" style="border-radius: 50%;" alt="foto de Danilo Ribeiro, cliente jv sato" width="64" height="64">
             </div>
             <div>
               <div class="author-name">Danilo Ribeiro</div>
@@ -506,7 +513,7 @@
           <p class="testimonial-quote">"Suporte excelente e atencioso. Sempre que precisei de algum ajuste ou dúvida com o site, fui atendido rapidamente e com total clareza."</p>
           <div class="testimonial-author">
             <div class="author-avatar">
-              <img src="images/jhoefontinelle.png" style="border-radius: 50%;" alt="foto de Jhoe Fontinelle, cliente jv sato">
+              <img src="images/jhoefontinelle.png" style="border-radius: 50%;" alt="foto de Jhoe Fontinelle, cliente jv sato" width="64" height="64">
             </div>
             <div>
               <div class="author-name">Jhoe Fontinelle</div>
@@ -657,7 +664,7 @@
       <div class="feature-row">
         <div class="feature-content reveal">
           <div class="user-profile">
-            <img src="images/joao.jpg" alt="João Victor Sato - Especialista em Desenvolvimento Web e SEO" class="user-photo">
+            <img src="images/joao.jpg" alt="João Victor Sato - Especialista em Desenvolvimento Web e SEO" class="user-photo" width="192" height="192">
             <h3 class="feature-title">João Victor Sato</h3>
           </div>
           <p class="feature-desc">Especializado em engenharia de software Web estático e SEO On-Page. Desenvolvo soluções digitais leves, velozes e altamente rentáveis para pequenas e médias empresas em todo o Brasil.</p>
@@ -734,7 +741,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary cta-btn">
-            Receber Proposta no WhatsApp →
+            Enviar via WhatsApp →
           </button>
         </form>
       </div>
@@ -838,7 +845,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="nav-logo">
-            <img src="images/logo.png" alt="Logo de jv sato" class="nav-logo-img">
+            <img src="images/logo.png" alt="Logo de jv sato" class="nav-logo-img" width="144" height="72">
           </a>
           <p class="footer-brand-desc">Criação de Sites Profissionais, Landing Pages, Domínio, Copywriter, SEO Otimizado e Hospedagem Web para Todo o Brasil.</p>
         </div>
@@ -854,7 +861,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </body>
 
 </html>
