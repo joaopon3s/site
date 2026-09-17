@@ -2514,6 +2514,33 @@ body::before {
     right: 0;
   }
 
+  .ticker-section {
+    padding: 36px 0;
+  }
+
+  .ticker-label {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .ticker-track-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ticker-track {
+    gap: 28px;
+  }
+
+  .ticker-item {
+    font-size: 0.95rem;
+  }
+
+  .ticker-item-icon {
+    width: 28px;
+    height: 28px;
+  }
+
   /* Carousel mobile */
   .carousel-stage {
     height: 400px;
