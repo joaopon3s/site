@@ -405,6 +405,18 @@ faqToggleAllBtn.addEventListener('click', () => {
 });
 
 /* ── ENVIO FORMULÁRIO CTA VIA WHATSAPP ── */
+const phoneNumber = '5511989580867';
+const demoMessage = 'Olá, gostaria de solicitar minha demonstração gratuita.';
+const siteMessage = 'Olá, quero meu site profissional.';
+const maintenanceMessage = 'Olá, quero contratar manutenção e otimização.';
+const completeSiteMessage = 'Olá, quero comprar meu site profissional completo.';
+const customProjectMessage = 'Olá, quero solicitar orçamento para projeto sob medida.';
+
+function openWhatsApp(text) {
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+}
+
 const ctaForm = document.getElementById('ctaWhatsappForm');
 
 if (ctaForm) {
@@ -417,8 +429,6 @@ if (ctaForm) {
     const service = document.getElementById('cta-service').value;
     const message = document.getElementById('cta-message').value.trim();
 
-    const phoneNumber = '5511989580867';
-
     let text = `*Olá, vim do seu site e gostaria de mais informações*\n\n`;
     text += `*Me chamo:* ${name}\n`;
     text += `*da Empresa:* ${company ? company : 'Não informado'}\n`;
@@ -429,19 +439,47 @@ if (ctaForm) {
       text += `*Mensagem:* ${message}\n`;
     }
 
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
-
-    window.open(whatsappUrl, '_blank');
+    openWhatsApp(text);
   });
 }
 
 /* ── PREENCHIMENTO AUTOMÁTICO DO SERVIÇO VIA BOTÕES DE CTA ── */
 document.querySelectorAll('[data-servico]').forEach(button => {
   button.addEventListener('click', (e) => {
+    const valorServico = button.getAttribute('data-servico');
+
+    if (valorServico === 'Demonstração Gratuita') {
+      e.preventDefault();
+      openWhatsApp(demoMessage);
+      return;
+    }
+
+    if (button.classList.contains('btn-primary-lg')) {
+      e.preventDefault();
+      openWhatsApp(siteMessage);
+      return;
+    }
+
+    if (valorServico === 'Manutenção') {
+      e.preventDefault();
+      openWhatsApp(maintenanceMessage);
+      return;
+    }
+
+    if (valorServico === 'Site profissional completo') {
+      e.preventDefault();
+      openWhatsApp(completeSiteMessage);
+      return;
+    }
+
+    if (valorServico === 'Projeto Sob Medida') {
+      e.preventDefault();
+      openWhatsApp(customProjectMessage);
+      return;
+    }
+
     e.preventDefault();
 
-    const valorServico = button.getAttribute('data-servico');
     const selectServico = document.getElementById('cta-service');
 
     if (selectServico) {
