@@ -1,2 +1,0 @@
-# site
-Meu portifólio oficial
