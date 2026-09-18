@@ -5,7 +5,6 @@ Disallow: /admin/
 Disallow: /drafts/
 Disallow: /private/
 Disallow: /*.json$
-Disallow: /*.xml$
 
 Allow: /sitemap.xml
 
