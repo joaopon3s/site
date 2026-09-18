@@ -9,4 +9,4 @@ Disallow: /*.xml$
 
 Allow: /sitemap.xml
 
-Sitemap: https://jvsato.com.br/sitemap.xml
+Sitemap: https://jvsato.com.br/criacao-de-sites-profissionais-em-mogi-das-cruzes/sitemap.xml
