@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+Allow: /sitemap.xml
+
+Sitemap: https://jvsato.com.br/criacao-de-sites-profissionais-em-sao-paulo/sitemap.xml
