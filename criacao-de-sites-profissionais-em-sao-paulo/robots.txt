@@ -8,4 +8,4 @@ Disallow: /*.json$
 
 Allow: /sitemap.xml
 
-Sitemap: https://jvsato.com.br/sitemap.xml
+Sitemap: https://jvsato.com.br/criacao-de-sites-profissionais-em-sao-paulo/sitemap.xml
