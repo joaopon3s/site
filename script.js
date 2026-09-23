@@ -405,7 +405,7 @@ faqToggleAllBtn.addEventListener('click', () => {
 });
 
 /* ── ENVIO FORMULÁRIO CTA VIA WHATSAPP ── */
-const phoneNumber = '5511989580867';
+const phoneNumber = '5511925975097';
 const demoMessage = 'Olá, gostaria de solicitar minha demonstração gratuita.';
 const siteMessage = 'Olá, quero meu site profissional.';
 const maintenanceMessage = 'Olá, quero contratar manutenção e otimização.';
